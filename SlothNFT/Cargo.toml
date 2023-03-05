@@ -1,0 +1,19 @@
+[package]
+name = "nft"
+description = "A cargo-generate template for Rust + Sway integration testing."
+version = "0.1.0"
+edition = "2021"
+authors = ["atulpatare"]
+license = "Apache-2.0"
+
+[dev-dependencies]
+fuels = { version = "0.30", features = ["fuel-core-lib"] }
+tokio = { version = "1.12", features = ["rt", "macros"] }
+
+[[test]]
+harness = true
+name = "tests"
+path = "tests/harness.rs"
+
+[dependencies]
+dotenv = "0.15.0"
